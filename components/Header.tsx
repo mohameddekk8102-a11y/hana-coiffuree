@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ onNavClick, activeSection, theme, onTog
           <img
             src="/Logo.svg"
             alt="Hana Coiffure"
-            className="h-16 sm:h-20 lg:h-24 w-auto object-contain transition-all"
+            className="h-12 sm:h-14 lg:h-16 w-auto object-contain transition-all"
           />
         </motion.div>
 
