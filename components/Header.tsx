@@ -21,28 +21,23 @@ const Header: React.FC<HeaderProps> = ({ onNavClick, activeSection, theme, onTog
   }, []);
 
   return (
-    <header 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 px-6 md:px-12 py-4 ${
-        isScrolled ? 'glass py-3' : 'bg-transparent'
-      }`}
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 px-6 md:px-12 py-4 ${isScrolled ? 'glass py-3' : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-3 cursor-pointer"
+          className="flex items-center cursor-pointer"
           onClick={() => onNavClick('home')}
         >
-          <img 
-            src="Logo Hana.png" 
-            alt="Hana Coiffure" 
-            className="h-10 md:h-12 w-auto object-contain transition-all"
+          <img
+            src="/Logo.svg"
+            alt="Hana Coiffure"
+            className="h-12 sm:h-14 md:h-16 w-auto object-contain transition-all"
           />
-          <div className="hidden sm:block">
-            <h1 className="font-serif text-xl tracking-widest text-hana-text uppercase font-bold transition-colors">Hana</h1>
-            <p className="text-[10px] tracking-[0.3em] text-hana-magenta uppercase -mt-1 font-semibold">Coiffure Prestige</p>
-          </div>
         </motion.div>
 
         {/* Desktop Nav */}
@@ -51,9 +46,8 @@ const Header: React.FC<HeaderProps> = ({ onNavClick, activeSection, theme, onTog
             <button
               key={link.id}
               onClick={() => onNavClick(link.id)}
-              className={`text-xs font-bold tracking-widest uppercase transition-colors hover:text-hana-magenta ${
-                activeSection === link.id ? 'text-hana-magenta' : 'text-hana-text'
-              }`}
+              className={`text-xs font-bold tracking-widest uppercase transition-colors hover:text-hana-magenta ${activeSection === link.id ? 'text-hana-magenta' : 'text-hana-text'
+                }`}
             >
               {link.label}
             </button>
@@ -62,11 +56,10 @@ const Header: React.FC<HeaderProps> = ({ onNavClick, activeSection, theme, onTog
           {/* Theme Toggle */}
           <button
             onClick={onToggleTheme}
-            className={`w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all duration-500 ${
-              theme === 'dark' 
-                ? 'border-hana-magenta shadow-[0_0_10px_rgba(177,30,118,0.4)] text-hana-magenta' 
-                : 'border-hana-magenta shadow-sm text-hana-magenta bg-white/50'
-            }`}
+            className={`w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all duration-500 ${theme === 'dark'
+              ? 'border-hana-magenta shadow-[0_0_10px_rgba(177,30,118,0.4)] text-hana-magenta'
+              : 'border-hana-magenta shadow-sm text-hana-magenta bg-white/50'
+              }`}
             title={theme === 'dark' ? 'Passer au mode clair' : 'Passer au mode sombre'}
           >
             {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
@@ -85,7 +78,7 @@ const Header: React.FC<HeaderProps> = ({ onNavClick, activeSection, theme, onTog
 
         {/* Action Button (Mobile Toggle Helper) */}
         <div className="md:hidden flex items-center gap-4">
-           <button
+          <button
             onClick={onToggleTheme}
             className="w-10 h-10 rounded-full border-2 border-hana-magenta flex items-center justify-center text-hana-magenta transition-all"
           >
