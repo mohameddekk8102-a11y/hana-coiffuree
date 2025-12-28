@@ -9,7 +9,7 @@ const Hero: React.FC<{ onReserve: () => void }> = ({ onReserve }) => {
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-hana-magenta/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-hana-magenta/5 blur-[100px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div className="z-10">
           <motion.p
@@ -19,12 +19,12 @@ const Hero: React.FC<{ onReserve: () => void }> = ({ onReserve }) => {
           >
             L'Éclat de l'Abyssinie, le Chic de Paris
           </motion.p>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl leading-tight mb-8 text-hana-text"
+            className="font-serif text-5xl md:text-6xl lg:text-8xl leading-tight mb-8 text-hana-text"
           >
             Révélez votre <br />
             <span className="text-hana-magenta italic">Majesté</span>
@@ -45,7 +45,7 @@ const Hero: React.FC<{ onReserve: () => void }> = ({ onReserve }) => {
             transition={{ delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <button 
+            <button
               onClick={onReserve}
               className="magenta-gradient text-white px-8 py-4 rounded-full font-bold tracking-widest uppercase text-sm hover:shadow-2xl hover:shadow-hana-magenta/40 transition-all"
             >
@@ -64,9 +64,9 @@ const Hero: React.FC<{ onReserve: () => void }> = ({ onReserve }) => {
           >
             <div className="flex -space-x-4">
               {[1, 2, 3].map((i) => (
-                <img 
+                <img
                   key={i}
-                  src={`https://picsum.photos/seed/${i + 10}/100/100`} 
+                  src={`https://picsum.photos/seed/${i + 10}/100/100`}
                   className="w-12 h-12 rounded-full border-2 border-hana-card"
                   alt="Client"
                 />
@@ -92,8 +92,8 @@ const Hero: React.FC<{ onReserve: () => void }> = ({ onReserve }) => {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="relative z-10 w-full aspect-[4/5] rounded-[2rem] overflow-hidden border-4 border-hana-glass-border shadow-2xl"
           >
-            <img 
-              src="https://picsum.photos/seed/salon-hero/800/1000" 
+            <img
+              src="https://picsum.photos/seed/salon-hero/800/1000"
               className="w-full h-full object-cover"
               alt="Hana Coiffure Salon"
             />
@@ -104,7 +104,7 @@ const Hero: React.FC<{ onReserve: () => void }> = ({ onReserve }) => {
               <p className="text-hana-text-sec tracking-widest text-xs uppercase font-bold">Route de l'Aéroport, Djibouti</p>
             </div>
           </motion.div>
-          
+
           {/* Floating Glass Card */}
           <motion.div
             animate={{ y: [0, -20, 0] }}

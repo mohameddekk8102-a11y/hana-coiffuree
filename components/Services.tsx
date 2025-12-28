@@ -19,14 +19,14 @@ const Services: React.FC = () => {
     <section id="services" className="py-24 bg-hana-bg relative overflow-hidden transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="text-hana-magenta tracking-widest uppercase text-xs mb-4 font-bold"
           >
             Notre Menu de Prestige
           </motion.p>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="font-serif text-4xl md:text-5xl text-hana-text mb-12"
@@ -43,11 +43,10 @@ const Services: React.FC = () => {
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`flex items-center gap-3 px-8 py-4 rounded-full border transition-all duration-500 ${
-                    isActive 
-                      ? 'bg-hana-magenta border-hana-magenta text-white shadow-xl shadow-hana-magenta/20' 
+                  className={`flex items-center gap-3 px-8 py-4 rounded-full border transition-all duration-500 ${isActive
+                      ? 'bg-hana-magenta border-hana-magenta text-white shadow-xl shadow-hana-magenta/20'
                       : 'border-hana-border-ui text-hana-text-sec hover:border-hana-magenta/50 hover:text-hana-magenta'
-                  }`}
+                    }`}
                 >
                   <Icon size={18} />
                   <span className="text-sm font-bold tracking-widest uppercase">{cat.label}</span>
@@ -57,7 +56,7 @@ const Services: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (
               <motion.div

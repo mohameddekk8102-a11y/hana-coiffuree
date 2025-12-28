@@ -6,17 +6,17 @@ import { PORTFOLIO } from '../constants';
 const Portfolio: React.FC = () => {
   return (
     <section id="portfolio" className="py-24 bg-hana-bg-sec transition-colors duration-500">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               className="text-hana-magenta tracking-widest uppercase text-xs mb-4 font-bold"
             >
               Exposition Artistique
             </motion.p>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               className="font-serif text-4xl md:text-5xl text-hana-text"
@@ -39,8 +39,8 @@ const Portfolio: React.FC = () => {
               transition={{ delay: index * 0.1 }}
               className="relative group cursor-pointer overflow-hidden rounded-3xl border border-hana-glass-border shadow-sm"
             >
-              <motion.img 
-                src={item.imageUrl} 
+              <motion.img
+                src={item.imageUrl}
                 alt={item.title}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.8 }}

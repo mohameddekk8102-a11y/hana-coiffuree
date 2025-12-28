@@ -36,12 +36,12 @@ const Header: React.FC<HeaderProps> = ({ onNavClick, activeSection, theme, onTog
           <img
             src="/Logo.svg"
             alt="Hana Coiffure"
-            className="h-12 sm:h-14 md:h-16 w-auto object-contain transition-all"
+            className="h-16 sm:h-20 lg:h-24 w-auto object-contain transition-all"
           />
         </motion.div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <button
               key={link.id}
@@ -69,7 +69,7 @@ const Header: React.FC<HeaderProps> = ({ onNavClick, activeSection, theme, onTog
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="hidden md:block bg-hana-magenta text-white px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase shadow-lg shadow-hana-magenta/20"
+            className="hidden lg:block bg-hana-magenta text-white px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase shadow-lg shadow-hana-magenta/20"
             onClick={() => onNavClick('contact')}
           >
             Réserver
@@ -77,7 +77,7 @@ const Header: React.FC<HeaderProps> = ({ onNavClick, activeSection, theme, onTog
         </nav>
 
         {/* Action Button (Mobile Toggle Helper) */}
-        <div className="md:hidden flex items-center gap-4">
+        <div className="lg:hidden flex items-center gap-4">
           <button
             onClick={onToggleTheme}
             className="w-10 h-10 rounded-full border-2 border-hana-magenta flex items-center justify-center text-hana-magenta transition-all"

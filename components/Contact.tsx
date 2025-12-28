@@ -6,18 +6,18 @@ import { Phone, MapPin, Clock, Instagram, Facebook } from 'lucide-react';
 const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-24 bg-hana-bg transition-colors duration-500">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Info Side */}
           <div>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               className="text-hana-magenta tracking-widest uppercase text-xs mb-4 font-bold"
             >
               Contact & Accès
             </motion.p>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               className="font-serif text-4xl md:text-5xl text-hana-text mb-12"
@@ -78,13 +78,13 @@ const Contact: React.FC = () => {
             <p className="text-hana-text-sec mb-10 max-w-xs">
               Nos experts vous attendent pour un diagnostic personnalisé.
             </p>
-            <a 
+            <a
               href="tel:+25377872368"
               className="magenta-gradient w-full py-5 rounded-full text-white font-bold tracking-widest uppercase flex items-center justify-center gap-4 shadow-xl shadow-hana-magenta/20"
             >
               Appeler Maintenant
             </a>
-            
+
             <div className="mt-12 flex gap-6">
               <a href="#" className="w-12 h-12 rounded-full border border-hana-border-ui flex items-center justify-center text-hana-magenta hover:text-white hover:bg-hana-magenta transition-all">
                 <Instagram size={20} />
