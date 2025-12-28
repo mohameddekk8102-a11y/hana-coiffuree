@@ -1,0 +1,8 @@
+
+{
+  "name": "Hana Coiffure - L'Excellence Franco-Éthiopienne",
+  "description": "Institut de beauté haut de gamme à Djibouti offrant des soins capillaires, esthétiques et rituels de bien-être dans un cadre luxueux.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
